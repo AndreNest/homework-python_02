@@ -9,7 +9,7 @@ def get_number(input_string):
         num = int(input(input_string))
         return  num
     except(ValueError):
-        print('Ошибка ввода! Введите число от 1 до 7: ')
+        print('Ошибка ввода! Введите число!')
         return get_number(input_string)
 
 def check_num(a,b):
