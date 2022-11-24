@@ -13,9 +13,10 @@ def get_number(input_string):
         return get_number(input_string)
 
 def check_num(a,b):
-    count = None
+    count = 0
     for i in range(a, b+1):
         if i % 2 == 0 and i % 3 == 0:
             count += 1
-    print(count)
+    print(f'Количество чисел подходящих под условия задачи - {count}')
 
+check_num(get_number('Введите число X: '),get_number('Введите число Y: '))
