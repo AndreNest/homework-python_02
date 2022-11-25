@@ -12,28 +12,30 @@ def get_number(input_string):
     except(ValueError):
         print('Ошибка ввода! Введите число!')
         return get_number(input_string)
-
 def pars_num(num):
     arr = []
+    i = 0
     while num > 0:
         arr.insert(0, num % 10)
         num = num // 10
-    print(arr)
-    return arr
+    new_arr = sorted(arr)
+    if new_arr == arr:
+        print('Цифры идут по возрастанию!')
+    else:
+        print('Цифры идут не по возрастанию.')
 
-def compar_num(arr):
-    for i in arr:
-        min_num = arr[0]
-        if arr[i+1] > min_num:
-            min_num = arr[i+1]
-            print('ok')
+def check_num(num_1):
+    for i in range(len(num_1)):
+        if num_1[i] > num_1[i - 1]:
+            i += 1
+            answer = "Цифры идут по возрастанию!"
         else:
-            print('herny')
-    print(f' min {min_num},index {i}')
+            answer = "Цифры идут не по возрастанию."
+    print(answer)
 
-# min_num = arr[i]
 
-compar_num(pars_num(get_number('Введите число X: ')))
+check_num(input('Введите число: '))
+pars_num(get_number('Введите число X: '))
 
 
 

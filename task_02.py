@@ -17,6 +17,7 @@ def max_num(x):
         num = arr.append(get_number('Введите число Х: '))
 
     arr.sort()
+    print(f"Список чисел: {arr}")
     print(f'Первое максимальное число: {arr[-1]}, Второе максимальное число: {arr[-2]}')
 
 max_num(get_number('Сколько числе будет введено? '))
